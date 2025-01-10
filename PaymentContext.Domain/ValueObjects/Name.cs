@@ -24,5 +24,11 @@ namespace PaymentContext.Domain.ValueObjects
 
         public string FirsName { get; private set; }
         public string LastName { get; private set; }
+
+        //sobrescrevendo o método ToString() para retornar o nome completo
+        public override string ToString()
+        {
+            return $"{FirsName} {LastName}";
+        }
     }
 }
