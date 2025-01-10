@@ -5,6 +5,7 @@ using PaymentContext.Shared.Commands;
 
 namespace PaymentContext.Domain.Commands
 {
+    //Classe para criar um comando de assinatura de boleto
     public class CreateBoletoSubscriptionCommand : Notifiable<Notification>, ICommand
     {
         public string FirstName { get; set; }
@@ -31,7 +32,7 @@ namespace PaymentContext.Domain.Commands
         public string Country { get; set; }
         public string ZipCode { get; set; }
 
-        public void Validate()
+         public void Validate()
         {
             AddNotifications(new Contract<Notification>()
                 .Requires()
@@ -46,6 +47,6 @@ namespace PaymentContext.Domain.Commands
                 .IsNotNullOrEmpty(Payer, "Payer", "Payer is required")
                 .IsNotNullOrEmpty(PayerDocument, "PayerDocument", "Payer document is required")
             );
-        }
+        } 
     }
 }
