@@ -2,6 +2,7 @@ using PaymentContext.Domain.Enums;
 
 namespace PaymentContext.Domain.Commands
 {
+    //Command para criar uma assinatura de cartão de crédito
     public class CreateCreditCardSubscriptionCommand
     {
         public string FirstName { get; set; }
