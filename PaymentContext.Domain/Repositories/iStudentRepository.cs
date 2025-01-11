@@ -1,6 +1,6 @@
 using PaymentContext.Domain.Entities;
 
-namespace PaymentContex.Domain.Repositories
+namespace PaymentContext.Domain.Repositories
 {
     public interface IStudentRepository
     {
