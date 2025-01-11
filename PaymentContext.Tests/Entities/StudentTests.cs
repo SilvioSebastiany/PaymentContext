@@ -32,7 +32,7 @@ namespace PaymentContext.Tests
             _subscription.AddPayment(payment);
             _student.AddSubscription(_subscription);
             _student.AddSubscription(new Subscription(null));
-            Assert.IsTrue(_student.IsValid);
+            Assert.IsTrue(!_student.IsValid);
         }
 
         [TestMethod]
